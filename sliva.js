@@ -95,7 +95,7 @@
       if (past) return "";
       const on = prev ? prev === t : first; first = false;
       return chip("time", t, t, on);
-    }).join("") || `<p class="form__note">На сегодня свободное время закончилось – выберите другой день.</p>`;
+    }).join("") || `<p class="form__note">На сегодня свободное время закончилось - выберите другой день.</p>`;
     if (!$("input[name=time]:checked") && $("input[name=time]")) $("input[name=time]").checked = true;
   };
   const text = () => {
@@ -104,7 +104,7 @@
       .replace("{день}", di ? days[+di.value].msg : "")
       .replace("{время}", tm ? tm.value : "");
     if (!tm) t = t.replace(/ в $|\s+в\s*\.$/, ".");
-    if (withShade && pick.shade) t = t.replace(/\.$/, `. Оттенок – ${pick.shade.toLowerCase()}, форма – ${pick.shape.toLowerCase()}.`);
+    if (withShade && pick.shade) t = t.replace(/\.$/, `. Оттенок - ${pick.shade.toLowerCase()}, форма - ${pick.shape.toLowerCase()}.`);
     return t;
   };
   function update() {
@@ -117,13 +117,13 @@
     form.addEventListener("change", (e) => { if (e.target.name === "day") drawTimes(); update(); });
     drawTimes(); update();
   }
-  // Telegram не принимает готовый текст по ссылке – копируем его, потом открываем чат
+  // Telegram не принимает готовый текст по ссылке - копируем его, потом открываем чат
   $$("[data-msg=tg]").forEach((a) => a.addEventListener("click", () => {
     const t = bubble ? bubble.textContent : "";
     if (t && navigator.clipboard) navigator.clipboard.writeText(t).then(() => { const n = $("[data-copied]"); if (n) n.hidden = false; }).catch(() => {});
   }));
 
-  // ---------- фото крупно: нажатие – открыть, ещё нажатие на фото – приблизить в 2,2 раза и вести мышкой или пальцем ----------
+  // ---------- фото крупно: нажатие - открыть, ещё нажатие на фото - приблизить в 2,2 раза и вести мышкой или пальцем ----------
   const figs = $$(".work"), lb = $(".lb");
   if (figs.length && lb && lb.showModal) {
     const fr = $(".lb__frame", lb), im = $(".lb__img", lb), cap = $(".lb__cap", lb);

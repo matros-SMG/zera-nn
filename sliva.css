@@ -159,7 +159,7 @@ p { margin: 0; }
 .prow small { grid-column: 1 / -1; color: var(--soft); font-size: .88rem; }
 .prices__note { color: var(--soft); font-size: .95rem; max-width: 60ch; }
 
-/* визит – это последовательность, поэтому номера */
+/* визит - это последовательность, поэтому номера */
 .steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(18px, 3vw, 36px); margin: 0; padding: 0; list-style: none; counter-reset: s; }
 .steps li { border-top: 1.5px solid var(--accent); padding-top: 18px; counter-increment: s; }
 .steps li::before { content: counter(s); display: block; font: 400 2.4rem/1 var(--f-display); color: var(--accent); margin-bottom: 14px; }
@@ -278,8 +278,8 @@ body.dark { --shadow: 0 26px 60px -26px rgb(0 0 0 / .7); color-scheme: dark; }
 .arch__q .stars { color: #f5b301; font-size: .95em; }
 .dark .swatch { box-shadow: 0 0 0 1px rgb(255 255 255 / .28); }
 
-/* 16.10.2026 (Сергей): в светлой теме плашка с ноготками – нейтральный беж (на почти белой молочный и перламутр сливались),
-   в тёмной – цвета карточек сайта; у ногтя тонкая обводка; бликующая волна; у всех фото – тонкая обводка цветом акцента (как в «Продающем») */
+/* 16.10.2026 (Сергей): в светлой теме плашка с ноготками - нейтральный беж (на почти белой молочный и перламутр сливались),
+   в тёмной - цвета карточек сайта; у ногтя тонкая обводка; бликующая волна; у всех фото - тонкая обводка цветом акцента (как в «Продающем») */
 body:not(.dark) .pick__card { --ink: #2a2422; --soft: #6b625d; --line: #d4cbc2; --card: #ebe5de; background: var(--card); color: var(--ink); }
 body:not(.dark) .pick__card .swatch { border-color: var(--card); box-shadow: 0 0 0 1px rgb(0 0 0 / .2); }
 body:not(.dark) .pick__card .swatch[aria-pressed="true"] { box-shadow: 0 0 0 2px var(--ink); }
